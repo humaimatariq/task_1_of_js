@@ -38,38 +38,17 @@ function convert() {
     }
 }
 function nextNum() {
-    const array = [1, 3, 5, 6, 7, 76, 4, 32];
     let f = document.getElementById('num').value;
+
     if (f === "") {
         alert("Field is Empty,enter number to find next in array");
     }
     else {
-        f = Number(f);
-        if (array.includes(f)) {
-            const first = array.findIndex(item => item == f);
-            const second=first+1;
-           if(second<array.length){
-            document.getElementById("r3").innerHTML =`${array[second]}`;
-           }
-           else{
-            document.getElementById("r3").innerHTML ="This last element in array ";
-           }
-        }
-        
-        else {
-            document.getElementById("r3").innerHTML = "This number is not in array";
-        }
-    }
-
-}
-function next() {
-    let i = Number(document.getElementById("n").value);
-    const final = i + 1;
-    if (i == "") {
-        alert("Enter Number to find next");
-    }
-    else {
-        document.getElementById("r4").innerHTML = `Next number is ${final}`
+        const ff = f.split("");
+        const fff = ff[ff.length - 1] ;
+        const second=Number(fff)+Number(1);
+        // document.getElementById("r3").innerHTML = second;
+        console.log(second);
     }
 }
 
@@ -78,12 +57,15 @@ function capital() {
     if (n == "") {
         alert("Field is Empty");
     }
+    else if (!isNaN(n)) {
+        document.getElementById("r5").innerHTML = "Invalid";
+    }
     else {
         const words = n.split(" ");
         for (let i = 0; i < words.length; i++) {
             words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1);
         }
-       const result= words.join(" ");
+        const result = words.join(" ");
         document.getElementById("r5").innerHTML = result;
     }
 }
