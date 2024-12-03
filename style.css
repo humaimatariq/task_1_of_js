@@ -1,0 +1,31 @@
+body{
+    background-image: url(./bg12.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.for1{
+    text-align: center;
+    background-color: rgba(69, 84, 37, 0.1);
+    width: 40%;
+
+
+}
+.cus{
+    /* background-color: rgb(38, 97, 87); */
+    background-color:rgb(67, 104, 92)
+}
+.custom{
+    color: white;
+}
+button{
+    color: white;
+}
+label{
+    color:white;
+}
+h3{
+    font-family:fantasy;
+}
+p , span{
+    color: white;
+}
