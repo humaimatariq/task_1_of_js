@@ -44,7 +44,7 @@ function nextNum() {
         alert("Field is Empty,enter number to find next in array");
     }
     else {
-        const ff = f.split("");
+        const ff = f.split(',');
         const fff = ff[ff.length - 1] ;
         const second=Number(fff)+Number(1);
          document.getElementById("r3").innerHTML = second;
